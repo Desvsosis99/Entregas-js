@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulador de Créditos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Simulador de Créditos</h2>
+  <form id="formularioCredito">
+      <label for="deudaInicial">Deuda Inicial:</label>
+      <input type="number" id="deudaInicial" required><br>
+
+      <label for="TEA">TEA (en formato decimal, ej: 0.1 para 10%):</label>
+      <input type="number" step="0.001" id="TEA" required><br>
+
+      <label for="numeroCuotas">Número de Cuotas:</label>
+      <input type="number" id="numeroCuotas" required><br>
+
+      <label for="fechaInicio">Fecha de Inicio (YYYY-MM-DD):</label>
+      <input type="date" id="fechaInicio" required><br>
+
+      <label for="fechaPrimerPago">Fecha del Primer Pago (YYYY-MM-DD):</label>
+      <input type="date" id="fechaPrimerPago" required><br>
+
+      <label for="diaPago">Día de Pago Mensual (1-31):</label>
+      <input type="number" id="diaPago" min="1" max="31" required><br>
+
+      <button type="button" onclick="calcularArrayCuotasYFechas()">Calcular</button>
+  </form>
+
+  <div id="tablaResultados"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

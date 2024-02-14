@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Créditos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Simulador de Créditos</h2>
+    <form id="formularioCredito">
+        <label for="nombreCliente">Nombre del Cliente:</label>
+        <input type="text" id="nombreCliente" required><br>
+
+        <label for="deudaInicial">Deuda Inicial:</label>
+        <input type="number" id="deudaInicial" required><br>
+
+        <label for="TEA">TEA (en formato decimal, ej: 0.1 para 10%):</label>
+        <input type="number" step="0.001" id="TEA" required><br>
+
+        <label for="numeroCuotas">Número de Cuotas:</label>
+        <input type="number" id="numeroCuotas" required><br>
+
+        <label for="fechaInicio">Fecha de Inicio:</label>
+        <input type="date" id="fechaInicio" required><br>
+
+        <label for="fechaPrimerPago">Fecha del Primer Pago:</label>
+        <input type="date" id="fechaPrimerPago" required><br>
+
+        <button type="button" id="calcular">Calcular</button>
+        <button type="button" id="verSimulaciones">Ver Simulaciones Guardadas</button>
+    </form>
+
+    <div id="tablaResultados"></div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
